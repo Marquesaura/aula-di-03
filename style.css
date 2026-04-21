@@ -7,12 +7,13 @@
     box-sizing: border-box;
 }
 
-cores {
-    color: #2f455c #21d0b2 #34f5c5 #1dcdfe;
-}
 
 body {
     background-color: #000000;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 120px;
 
 }
 
@@ -20,6 +21,15 @@ header {
     background-color: #2f455c;
     text-align: center;
     padding: 20px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 120px;
+    box-sizing: border-box;
+    
+
 }
 
 nav a {
@@ -43,10 +53,13 @@ nav a:hover {
 
 main {
     margin: 50px;
+    flex: 1;
 }
-h2{
+
+h2 {
     margin-bottom: 10PX;
 }
+
 .bloco {
     background-color: #2f455c;
     color: black;
@@ -60,11 +73,14 @@ h2{
     height: auto;
     align-items: center;
     text-align: center;
-}
-.bloco:hover{
-    border-top: 2px solid #21d0b2;
     transition: 0.4s;
 }
+
+.bloco:hover {
+    border-top: 4px solid #21d0b2;
+    
+}
+
 li,
 ul,
 ol {
@@ -72,7 +88,12 @@ ol {
     padding-left: 20px;
     padding-right: 20px;
     list-style-type: none;
+    transition: 0.4s;
 
+}
+
+li:hover {
+    color: #ffffff;
 }
 
 #galeria {
@@ -93,6 +114,7 @@ ol {
     text-align: center;
     border-radius: 4px;
     height: 200px;
+    transition: 0.4s;
 }
 
 .foto img {
@@ -103,7 +125,7 @@ ol {
 }
 
 .foto:hover {
-    transform: scale(1.08) rotate(2deg);
+    transform: scale(1.08);
     transition: 0.4s;
 
 }
@@ -113,4 +135,12 @@ ol {
     font-family: 'Courier New', Courier, monospace;
     font-size: 15px;
     font-style: italic;
+}
+
+footer {
+    background-color: #2f455c;
+    color: #ffffff;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
 }
